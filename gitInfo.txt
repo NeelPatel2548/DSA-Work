@@ -1,0 +1,131 @@
+
+# 🔥 COMPLETE FLOW: Upload / Update Local Folder to GitHub
+
+
+
+# 🟢 🟢 FIRST TIME (Connecting Local Folder to GitHub)
+
+ ✅ Step 1: Go to project folder
+
+```bash
+cd "F:\DSA Work fo Git"
+```
+
+ ✅ Step 2: Initialize Git (only once)
+
+```bash
+git init
+```
+
+ ✅ Step 3: Add files
+
+```bash
+git add .
+```
+
+
+✅ Step 4: Commit
+
+```bash
+git commit -m "Initial commit"
+```
+
+ ✅ Step 5: Connect to GitHub repo
+
+(Repo on GitHub must already exist)
+
+Example repo:
+`https://github.com/NeelPatel2548/DSA-Work.git`
+
+```bash
+git remote add origin https://github.com/NeelPatel2548/DSA-Work.git
+```
+
+ ✅ Step 6: Pull first (VERY IMPORTANT 🔥)
+
+```bash
+git pull origin main --allow-unrelated-histories
+```
+
+(Prevents push rejected error)
+
+
+ ✅ Step 7: Push
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+✅ Done.
+
+
+
+# 🟡 🟡 AFTER FIRST TIME (Updating Code)
+
+Now whenever you modify or add files:
+
+ 🔹 Step 1: Check status
+
+```bash
+git status
+```
+
+
+
+ 🔹 Step 2: Add changes
+
+```bash
+git add .
+```
+
+
+
+ 🔹 Step 3: Commit
+
+```bash
+git commit -m "Added binary search solution"
+```
+
+
+
+ 🔹 Step 4: Pull (safe practice)
+
+```bash
+git pull origin main
+```
+
+
+
+ 🔹 Step 5: Push
+
+```bash
+git push
+```
+
+
+
+# 💡 SIMPLE MEMORY TRICK
+
+After first setup, remember:
+
+```
+add → commit → pull → push
+```
+
+
+
+# 🔥 PROFESSIONAL WORKFLOW (What Companies Use)
+
+```
+1. git pull
+2. Make changes
+3. git add .
+4. git commit -m "meaningful message"
+5. git push
+```
+
+Always pull first before starting work.
+
+
+
