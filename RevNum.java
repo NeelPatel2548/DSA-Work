@@ -1,17 +1,21 @@
 public class RevNum {
     public int reverse(int n) {
-    
-    String rev = "";
+    int rev = 0;
 
-     while (n != 0) {
-        
-        rev = rev.concat(String.valueOf(n%10));
-        n = n / 10;
-    }
-    System.out.println("REv: " + rev);
-    return Integer.parseInt(rev);
+    while (n != 0) {
+        int last = n % 10;  // generate last number
+
+        //to check it stayus within Integer range or not
+        if (rev > Integer.MAX_VALUE / 10 ||   
+            rev < Integer.MIN_VALUE / 10) {
+            return 0;
+        }
+        rev = rev * 10 + last;  // main logic for reverse number 
+        n /= 10; // remove last number
     }
 
+    return rev;
+}
     public static void main(String[] args)
     {
         int num = 123;
@@ -21,3 +25,4 @@ public class RevNum {
         System.out.println(ret);
     }
 }
+
