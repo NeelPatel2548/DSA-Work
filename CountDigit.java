@@ -2,19 +2,19 @@ import java.util.Scanner;
 
 public class CountDigit{
     
-    public int countDigit(int n) {
-        int last, rem, count = 0;
+   public int countDigit(int n) {
+    if (n == 0)
+        return 1;
 
-        String len = String.valueOf(n);
-        for(int i =0; i<=len.length(); i++)
-        {
-             last = n%10;
-            rem = n/10;
-            len = String.valueOf(rem);
-            count++;
-        }
-        return count;
+    int count = 0;
+
+    while (n != 0) {
+        n = n / 10;
+        count++;
     }
+
+    return count;
+}
 
     public static void main(String[] args)
     {
@@ -25,6 +25,6 @@ public class CountDigit{
         CountDigit cd = new CountDigit();
         // cd.countDigit(num);
         int totCou = cd.countDigit(num);
-        System.out.println(totCou);
+        System.out.println("Output: " + totCou);
     }
 }
